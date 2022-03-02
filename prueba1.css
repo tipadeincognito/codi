@@ -1,0 +1,105 @@
+.basefey {--var-coscuro: #060908; --var-coscurot: rgb(6,9,8,0.6); --var-colorgris: rgba(242, 242, 242, 1); --var-colorgrist:rgb(89,101,97,0.6); --var-cverde: #202b2c; --color-acento: #273933;}
+.basefey {width: 500px; height: 400px; margin: 0 auto; background: var(--var-coscuro); display: flex; flex-wrap: wrap; justify-content: center;}
+.feyface {padding: 20px; width: 250px; height: 400px; border-right: 4px solid var(--var-colorgris); background: url(https://i.imgur.com/mzskyb9.png); display: flex; flex-direction: column;}
+.abajo {height: 240px;}
+.feyright {width: 250px; height: 400px; background: url(https://i.imgur.com/qEb82qy.png); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 30px 0;}
+.minicuervo {width: 125px; height: 125px; background: var(--var-coscuro); border: 1px solid var(--var-colorgris);}
+.playlist {width: 110px; height: 16px; padding: 3px; border-radius: 10px; background: var(--var-colorgris); text-align: center; font-family: Pixel; font-size: 10px; color: var(--var-coscuro);}
+.playlist:hover {background: var(--color-acento);}
+.playlist a, .playlist a:link, .playlist a:visited, .playlist a:hover {text-decoration: none; color: var(--var-coscuro);}
+.playlist:hover .playlist a, .playlist:hover .playlist a:link, .playlist:hover .playlist a:visited, .playlist a:hover {color: var(--var-colorgris);}
+.cajitaplaylist {width: 210px; height: 150px; overflow: auto;}
+.cajitacancion {height: 40px; border-radius: 10px; padding: 10px; margin: 2px; color: var(--var-colorgris); background: var(--var-coscurot); display: flex; align-items: center; transition: 1s; transition-delay: 0.8s;}
+.cajitacancion a, .cajitacancion a:link, .cajitacancion a:visited {text-decoration: none; color: var(--var-colorgris);}
+.cancion {font-family: Arial; font-size: 11px; flex-direction: column; margin-left: 5px; width: 150px;}
+.icfey {margin: 0 5px; font-size: 12px;}
+.cajitacancion:hover {background: var(--var-colorgrist); color: var(--var-cverde);}
+.cajitacancion:hover .cajitacancion a, .cajitacancion:hover .cajitacancion a:link, .cajitacancion:hover .cajitacancion a:visited, .cajitacancion a:hover {color: var(--var-cverde);}
+
+/*player*/
+.player { display: flex; align-items: center; justify-content: center; margin-top: 10px;}
+.player i {margin: 5px; color: var(--var-colorgris); cursor: pointer;}
+.icplay {font-size: 20px;}
+.ic2 {font-size: 8px;}
+/*fin player*/
+
+/*texto infinito lyrics*/
+.example3 {
+ height: 80px;	
+ overflow: hidden;
+ position: relative;
+ vertical-align: bottom;
+ font-family: Pixel; text-transform: uppercase; font-size: 8px; color: var(--var-colorgris);
+}
+.example3 h3 {
+   position: absolute;
+   bottom: 0;
+}
+ .example3 h3 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 20px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateY(0%);
+ -webkit-transform:translateY(0%);	
+ transform:translateY(0%);
+ /* Apply animation to this element */	
+ -moz-animation: example3 5s linear infinite;
+ -webkit-animation: example3 5s linear infinite;
+ animation: example3 5s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example3 {
+ 0%   { -moz-transform: translateY(0%); }
+ 100% { -moz-transform: translateY(100%); }
+}
+@-webkit-keyframes example3 {
+ 0%   { -webkit-transform: translateY(0%); }
+ 100% { -webkit-transform: translateY(100%); }
+}
+@keyframes example3 {
+ 0%   { 
+ -moz-transform: translateY(0%); /* Firefox bug fix */
+ -webkit-transform: translateY(-100%); /* Firefox bug fix */
+ transform: translateY(-50%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(100%); /* Firefox bug fix */
+ -webkit-transform: translateY(100%); /* Firefox bug fix */
+ transform: translateY(100%); 
+ }
+} 
+/*fin texto lyrics*
+
+
+
+
+/* fuente para lyrics, blanco o gris claro*/
+@font-face {font-family: Pixel; src: url('https://tipadeincognito.github.io/codi/pixelmix.ttf');}
+/*resto de fuente es Arial
+PLAYLIST: Arial 13px mayus negro con fondo gris claro
+Titulo canción: Arial 14px gris claro, el fondo de esto es negro al 0.4 aprox
+Nombre cantante: Arial 13px Narrow Italic gris claro*/
+
+/*tamaños 508x400px; 122x124px*/
+
+/*barrita scroll*/
+* { scrollbar-color: var(--color-acento) var(--var-coscuro); scrollbar-width: thin;}
+::-webkit-scrollbar {height:9px;width:7px;}
+::-webkit-scrollbar-thumb {background:var(--color-acento);-webkit-border-radius: 0;-moz-border-radius: 0;}
+::-webkit-scrollbar-track {background-color: var (--var-coscuro);display: block;}
+/*code imprescindible para avam aqui abajo*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 13px;
+  word-break: normal;
+  hyphens: auto;
+}
+/*fin del code de avam*/
